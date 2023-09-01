@@ -1,0 +1,29 @@
+.autocompleteWrap {
+  position: relative;
+  display: none;
+  z-index: 2;
+}
+.autocompleteWrapOpen {
+  display: inline-block;
+}
+.autocompleteList {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #9CA3AF;
+  border-radius: 5px;
+}
+.autocompleteItem {
+  /* display: block; */
+  padding: 10px 10px;
+  cursor: pointer;
+  color: black;
+  background-color: #fff;
+  border: none;
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}

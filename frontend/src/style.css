@@ -1,0 +1,639 @@
+@font-face {
+  font-family: 'Ubuntu';
+  font-display: swap;
+  font-weight: 300;
+  src: url(./assets/fonts/Ubuntu-Light.woff2),
+    url(./assets/fonts/Ubuntu-Light.woff);
+}
+@font-face {
+	font-family: 'Ubuntu';
+  font-display: swap;
+  font-weight: 400;
+	src: url(./assets/fonts/Ubuntu-Regular.woff2),
+    url(./assets/fonts/Ubuntu-Regular.woff);
+}
+@font-face {
+	font-family: 'Ubuntu';
+  font-display: swap;
+  font-weight: 600;
+	src: url(./assets/fonts/Ubuntu-Medium.woff2),
+    url(./assets/fonts/Ubuntu-Medium.woff);
+}
+@font-face {
+	font-family: 'Ubuntu';
+  font-display: swap;
+  font-weight: 700;
+	src: url(./assets/fonts/Ubuntu-Bold.woff2),
+    url(./assets/fonts/Ubuntu-Bold.woff);
+}
+html {
+  height: 100%;
+  font-family: 'Ubuntu';
+}
+body {
+  margin: 0;
+  height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.main {
+  padding: 50px;
+  max-width: 1330px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mainTitle {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 40px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #116ACC;
+  padding: 31px 50px;
+}
+.btnATM, .btnAccounts, .btnCurrency, .btnExit {
+  padding: 14px 24px;
+  color: #116ACC;
+  background: #FFFFFF;
+  border: 2px solid #116ACC;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+.btnATM, .btnAccounts, .btnCurrency {
+  margin-right: 25px;
+}
+.btnATM:disabled, .btnAccounts:disabled, .btnCurrency:disabled, .btnExit:disabled {
+  background: #A0C3FF;
+  border: 2px solid #116ACC;
+}
+/* Страница авторизации */
+.mainAuth {
+  height: 100%;
+  position: relative;
+}
+.formAuth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  padding: 50px;
+  padding-right: 70px;
+  background: #F3F4F6;
+  border-radius: 50px;
+}
+
+.formAuthTitle {
+  margin-bottom: 35px;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+}
+.inputLoginDiv, .inputPasswordDiv {
+  text-align: right;
+}
+.inputLoginSpan, .inputPasswordSpan {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.inputLogin, .inputPassword {
+  width: 270px;
+  margin-left: 10px;
+  margin-bottom: 25px;
+  padding: 12px 12px 12px 16px;
+  border-radius: 7px;
+  border: 1px solid #9CA3AF;
+  align-items: right;
+}
+.buttonAuth {
+  width: 83px;
+  padding: 14px 21px;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  background: #116ACC;
+  color: white;
+  transform: translateX(75px);
+}
+.buttonAuth:disabled {
+  background: #4e90d6;
+}
+.validationAuth {
+  position: absolute;
+  bottom: 15px;
+  left: 125px;
+  color: #BA0000;
+  font-size: 20px;
+  font-weight: 600;
+}
+/* Счета */
+.navigationAccountsDiv {
+  display: flex;
+  margin-bottom: 51px;
+}
+.accountsTitle {
+  margin-right: 35px;
+}
+#sortSelect {
+  width: 268px;
+  margin-right: auto;
+}
+.createNewAccountBtn, .goBackButton {
+  padding: 16px 24px;
+  align-items: center;
+  background: #116ACC;
+  border-radius: 7px;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+}
+.plus, .leftArrow, .letter {
+  margin-right: 14px;
+  transform: translateY(2px);
+}
+.accountsDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.accountDiv {
+  position: relative;
+  width: 356px;
+  /* margin-right: 70px; */
+  margin-bottom: 50px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+.accountDiv:nth-child(3) {
+  margin-right: 0px;
+}
+/* .accountNumber, .accountBalance, .lastTransactionDiv, .accountBtnMore {
+  display: block;
+} */
+.accountNumber {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+.accountBalance {
+  margin-bottom: 35px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.lastTransactionDiv {
+  display: flex;
+  flex-direction: column;
+}
+.accountBtnMore {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background: #116ACC;
+  border-radius: 7px;
+  border: none;
+}
+/* Счёт */
+.navigationAccountInfoDiv {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 31px;
+}
+.numberAndBalanceDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.numberInfoSpan {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 40px;
+}
+.balanceInfoDiv {
+  display: flex;
+  flex-direction: row;
+}
+.balanceTextSpan {
+  margin-right: 50px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+}
+.balanceValueSpan {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+}
+.mainInfoDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.formTransaction {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  padding: 25px 40px;
+  margin-bottom: 50px;
+  background: #F3F4F6;
+  border-radius: 50px;
+}
+.validationTransaction {
+  position: absolute;
+  bottom: 25px;
+  left: 125px;
+  color: #BA0000;
+  font-size: 20px;
+  font-weight: 600;
+}
+.formTransactionTitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 25px;
+}
+.inputPayRecipientDiv, .inputAmountDiv {
+  text-align: right;
+}
+.inputPayRecipientSpan, .inputAmountSpan {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.inputPayRecipient, .inputAmount {
+  width: 270px;
+  margin-left: 15px;
+  margin-bottom: 25px;
+  padding: 12px 12px 12px 16px;
+  border-radius: 7px;
+  border: 1px solid #9CA3AF;
+  align-items: right;
+}
+.buttonTransaction {
+  width: 163px;
+  padding: 14px 21px;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  background: #116ACC;
+  color: white;
+  transform: translateX(220px);
+}
+.buttonTransaction:disabled {
+  background: #4e90d6;
+}
+/* таблица транзакций */
+.transactionsTableDiv {
+  width: 100%;
+  padding: 25px 50px;
+  padding-bottom: 66px;
+  background: #F3F4F6;
+  border-radius: 56px;
+}
+.transactionTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+.transactionsTableTitle {
+  margin-bottom: 25px;
+}
+.transactionsTitleTr {
+  background-color: #116ACC;
+  border-radius: 15px;
+}
+.transactionsTitleTd {
+  padding: 20px 25px;
+  color: white;
+}
+.transactionsTitleTd:first-child {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.transactionsTitleTd:last-child {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.transactionsTd {
+  padding: 20px 25px;
+}
+.transactionsTdPlus {
+  color: #76CA66;
+}
+.transactionsTdMinus {
+  color: #FD4E5D;
+}
+.transactionsTr {
+  border-bottom: 2px solid #0052FF1A;
+}
+/* Динамика баланса */
+.balanceDynamicsSmallDiv {
+  position: relative;
+  height: 288px;
+  width: 584px;
+  margin-bottom: 50px;
+  padding: 25px 50px;
+  border-radius: 50px;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  cursor: pointer;
+}
+.balanceDynamicTitle {
+  margin-bottom: 25px;
+}
+#balanceDynamicChart {
+  max-height: 200px;
+}
+/* история баланса */
+.balanceDynamicsBigDiv, .transactionsRatioDiv {
+  position: relative;
+    height: 288px;
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 25px 100px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 20px rgb(0 0 0 / 25%);
+    border-radius: 50px;
+}
+#balanceDynamicChartBig, #transactionsRatioChart {
+  max-height: 200px;
+}
+/* Валюта */
+.currencyMainDiv {
+  display: flex;
+}
+.currencyTitle {
+  margin-bottom: 56px;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 40px;
+}
+.currencyLeftDiv {
+  width: 588px;
+  margin-right: 50px;
+}
+.yourCurrenciesDiv {
+  width: calc(100% - 100px);
+  margin-bottom: 44px;
+  padding: 50px;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+.yourCurrenciesTitle {
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+}
+.currencyItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.nameOfCurrency {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  margin-right: 10px;
+}
+.valueOfCurrency {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+}
+.ellipsis {
+  flex: 1 0;
+  border-bottom: 1px dotted #000;
+  height: 1em;
+  margin: 0 .4em;
+}
+.changeCurrencyForm {
+  position: relative;
+  padding: 50px;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+.changeCurrencyFormTitle {
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+}
+.changeCurrencyFormDiv {
+  display: flex;
+}
+.fromToSelectsDiv {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.fromToSpan {
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+.select {
+  margin-right: 20px;
+}
+.currencyValueSpan {
+  margin-right: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+.currencyValueInput {
+  padding: 8px 16px;
+  width: 266px;
+  height: 26px;
+  background: #FFFFFF;
+  border: 1px solid #9CA3AF;
+  border-radius: 7px;
+}
+.changeCurrencyBtn {
+  padding: 47px 13px;
+  color: white;
+  background: #116ACC;
+  border: none;
+  border-radius: 7px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+.changeCurrencyFormValidation {
+  position: absolute;
+  bottom: 15px;
+  left: 125px;
+  color: #BA0000;
+  font-size: 20px;
+  font-weight: 600;
+}
+/* .changeCurrencyBtn:disabled {
+  background: #4e90d6;
+} */
+.currencyChangeOfCoursesDiv {
+  display: flex;
+  width: 703px;
+  flex-direction: column;
+  padding: 50px;
+  padding-bottom: 80px;
+  background: #E5E5E5;
+  border-radius: 50px;
+}
+.currencyChangeOfCoursesDivTitle {
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+}
+.courseOfCurrencyPairDiv {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.currencyPairName {
+  margin-right: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+}
+.currencyPairRate {
+  margin-left: 10px;
+  margin-right: 15px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+}
+.ellipsisGreen {
+  border-bottom: 1px dotted #76CA66;
+}
+.ellipsisRed {
+  border-bottom: 1px dotted #FD4E5D;
+}
+/* Карта банкоматов */
+.ATMsTitle {
+  margin-bottom: 20px;
+}
+/* прелоадер */
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 100;
+}
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #337ab7;
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+@keyframes Loader {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.disabled {
+  background: #A0C3FF;
+}
